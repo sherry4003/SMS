@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#004966"
+    android:weightSum="1">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.14">
+
+        <TextView
+            android:id="@+id/txt1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:shadowColor="#aaece3"
+            android:shadowDx="-2"
+            android:shadowDy="-2"
+            android:shadowRadius="5.0"
+            android:text="SMS Schedule Setting"
+            android:textColor="#19d8a7"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/contactId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Add Reciption:"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_below="@+id/txt1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/addbtn"
+            android:onClick="AddContactButtonClicked"
+            android:layout_width="100dp"
+            android:layout_height="39dp"
+            android:layout_marginLeft="31dp"
+            android:layout_marginStart="31dp"
+            android:background="@drawable/addbutton_background"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="ADD"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:layout_alignBaseline="@+id/contactId"
+            android:layout_alignBottom="@+id/contactId"
+            android:layout_toRightOf="@+id/contactId"
+            android:layout_toEndOf="@+id/contactId" />
+
+        <EditText
+            android:id="@+id/searchtxt"
+            style="@style/editText_style"
+            android:hint="  Add reciption"
+            android:layout_below="@+id/addbtn"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="20dp" />
+
+        <Button
+            android:id="@+id/selectDatebtn"
+            android:layout_width="212dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/searchtxt"
+            android:layout_marginTop="11dp"
+            android:layout_weight="0.08"
+            android:background="@drawable/addbutton_background"
+            android:onClick="selectDateButtonClicked"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Select Date"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+
+        <EditText
+            android:id="@+id/datetxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/selectDatebtn"
+            android:layout_toEndOf="@+id/selectTimebtn"
+            android:text="Date"
+            android:enabled="false"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/selectTimebtn" />
+
+
+        <Button
+            android:id="@+id/selectTimebtn"
+            android:layout_width="213dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/selectDatebtn"
+            android:layout_marginTop="11dp"
+            android:background="@drawable/addbutton_background"
+            android:onClick="SelecttTimeButtonClicked"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Select Time"
+            android:textColor="#FFFFFF"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/timetxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/selectTimebtn"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp"
+            android:layout_toRightOf="@+id/selectTimebtn"
+            android:text="Time"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            android:enabled="false"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/mesgtxt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:text="Message:"
+        android:padding="5dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/mesgEditText"
+        style="@style/mesgeditText_style"
+        android:paddingLeft="35dp"
+        android:paddingTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="11dp" />
+
+    <RelativeLayout
+        android:layout_width="402dp"
+        android:layout_height="72dp">
+
+        <Button
+            android:id="@+id/setbutton"
+            android:onClick="SetButtonClicked"
+            android:layout_width="120dp"
+            android:layout_height="47dp"
+            android:layout_marginLeft="42dp"
+            android:layout_marginStart="42dp"
+            android:background="@drawable/setbutton_background"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Set"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/cancelbutton"
+            android:onClick="Cancelbuttonclicked"
+            android:layout_width="120dp"
+            android:layout_height="47dp"
+            android:background="@drawable/setbutton_background"
+            android:shadowColor="#A8A8A8"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
+            android:text="Cancel"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@+id/setbutton"
+            android:layout_toEndOf="@+id/setbutton"
+            android:layout_marginLeft="46dp"
+            android:layout_marginStart="46dp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

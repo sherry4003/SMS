@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#195b75">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/nametxt"
+        android:textSize="25dp"
+        android:textColor="#f0bdd1"
+        android:paddingLeft="15dp"
+        android:paddingTop="5dp"
+        android:textStyle="bold"
+        android:text="name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/messagetxt"
+        android:textSize="20dp"
+        android:paddingLeft="15dp"
+        android:textColor="#bdd1f0"
+        android:text="message"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/datetxt"
+            android:textSize="20dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="#bdd1f0"
+            android:text="11/22/2017"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timetxt"
+            android:layout_toRightOf="@+id/datetxt"
+            android:textSize="20dp"
+            android:paddingLeft="15dp"
+            android:paddingBottom="15dp"
+            android:textColor="#bdd1f0"
+            android:text="10:00am"
+            />
+    </RelativeLayout>
+
+
+
+</LinearLayout>
